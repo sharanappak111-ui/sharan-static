@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub | Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">📚 Knowledge Hub</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#books">Books</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="tagline">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h1>Discover a World of Knowledge</h1>
+            <p>Explore books, discover new ideas, and let your imagination grow.</p>
+            <a href="#books" class="button">Explore Books</a>
+        </section>
+
+        <section class="search-section">
+            <h2>Find Your Next Read</h2>
+            <input type="search" placeholder="Search books, authors or topics..."
+                   aria-label="Search books">
+        </section>
+
+        <section class="books" id="books">
+            <h2>Featured Books</h2>
+            <p class="section-description">A few great reads to get you started.</p>
+
+            <div class="book-grid">
+                <article class="book-card">
+                    <div class="book-cover cover-one">ATOMIC<br>HABITS</div>
+                    <h3>Atomic Habits</h3>
+                    <p>James Clear</p>
+                    <span>Self Development</span>
+                </article>
+
+                <article class="book-card">
+                    <div class="book-cover cover-two">THE<br>ALCHEMIST</div>
+                    <h3>The Alchemist</h3>
+                    <p>Paulo Coelho</p>
+                    <span>Fiction</span>
+                </article>
+
+                <article class="book-card">
+                    <div class="book-cover cover-three">DEEP<br>WORK</div>
+                    <h3>Deep Work</h3>
+                    <p>Cal Newport</p>
+                    <span>Productivity</span>
+                </article>
+
+                <article class="book-card">
+                    <div class="book-cover cover-four">CLEAN<br>CODE</div>
+                    <h3>Clean Code</h3>
+                    <p>Robert C. Martin</p>
+                    <span>Technology</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="categories" id="categories">
+            <h2>Explore Categories</h2>
+            <div class="category-grid">
+                <div>💻 Technology</div>
+                <div>🚀 Self Development</div>
+                <div>🔬 Science</div>
+                <div>📖 Fiction</div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>A Library for Curious Minds</h2>
+            <p>
+                Knowledge Hub celebrates learning, creativity, and the power
+                of reading. Every book is an opportunity to discover something new.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Knowledge Hub | Built for a DevOps CI/CD </p>
+        <p>Deployed with Jenkins, Docker and AWS EC2</p>
+    </footer>
+
+</body>
+</html>
