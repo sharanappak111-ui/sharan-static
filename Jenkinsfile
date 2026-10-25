@@ -104,7 +104,7 @@ pipeline {
 
                     for i in \$(seq 1 15); do
                       if curl -fsS http://localhost:${DEPLOY_PORT}/ \
-                        | grep 'Welcome to My DevOps Demo'; then
+                        | grep 'Knowledge Hub'; then
                         exit 0
                       fi
                       sleep 2
