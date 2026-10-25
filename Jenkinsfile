@@ -80,7 +80,7 @@ pipeline {
                                     done
 
                                     curl -fsS http://localhost:${testPort}/ \
-                                      | grep 'Welcome to My DevOps Demo'
+                                      | grep 'Discover a World of Knowledge'
 
                                     docker rm -f test-${SERVER}
                                 """
