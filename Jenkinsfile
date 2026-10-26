@@ -120,7 +120,7 @@ pipeline {
     post {
         success {
             slackSend(
-                channel: '#devops-alerts',
+                channel: '#devops-notifications',
                 color: 'good',
                 message: "SUCCESS: ${JOB_NAME} #${BUILD_NUMBER} deployed. ${BUILD_URL}"
             )
@@ -128,7 +128,7 @@ pipeline {
 
         unstable {
             slackSend(
-                channel: '#devops-alerts',
+                channel: '#devops-notifications',
                 color: 'warning',
                 message: "UNSTABLE: ${JOB_NAME} #${BUILD_NUMBER}. ${BUILD_URL}"
             )
@@ -136,7 +136,7 @@ pipeline {
 
         failure {
             slackSend(
-                channel: '#devops-alerts',
+                channel: '#devops-notifications',
                 color: 'danger',
                 message: "FAILED: ${JOB_NAME} #${BUILD_NUMBER}. Check ${BUILD_URL}"
             )
