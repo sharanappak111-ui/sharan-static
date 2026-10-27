@@ -122,7 +122,7 @@ pipeline {
             slackSend(
                 channel: '#devops-notifications',
                 color: 'good',
-                message: "Checked the Webhook SUCCESS: ${JOB_NAME} #${BUILD_NUMBER} deployed. ${BUILD_URL}"
+                message: "Checking the Webhook SUCCESS: ${JOB_NAME} #${BUILD_NUMBER} deployed. ${BUILD_URL}"
             )
         }
 
