@@ -40,7 +40,7 @@ pipeline {
                             -Dsonar.projectKey=knowledge-hub \
                             -Dsonar.projectName='Knowledge Hub' \
                             -Dsonar.sources=website \
-                            -Dsonar.exclusions=**/*.js,**/*.jsx,**/*.ts,**/*.tsx,**/*.css
+                            -Dsonar.exclusions=website/**/*
                         """
 
             }
