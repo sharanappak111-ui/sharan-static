@@ -161,7 +161,7 @@ pipeline {
             slackSend(
                 channel: '#devops-notifications',
                 color: 'danger',
-                message: "FAILED: ${JOB_NAME} #${BUILD_NUMBER}. Check ${BUILD_URL}"
+                message: "Pipeline FAILED: ${JOB_NAME} #${BUILD_NUMBER}. Check ${BUILD_URL}"
             )
         }
 
