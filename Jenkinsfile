@@ -34,12 +34,15 @@ pipeline {
                     def scannerHome = tool 'SonarScanner'
 
                         withSonarQubeEnv('SonarQube') {
-                        sh """
+                        
+                            sh """
                             '${scannerHome}/bin/sonar-scanner' \
                             -Dsonar.projectKey=knowledge-hub \
                             -Dsonar.projectName='Knowledge Hub' \
-                            -Dsonar.sources=website
-                            """
+                            -Dsonar.sources=website \
+                            -Dsonar.exclusions=**/*.js,**/*.jsx,**/*.ts,**/*.tsx,**/*.css
+                        """
+
             }
         }
     }
