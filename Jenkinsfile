@@ -26,17 +26,21 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-    agent {
-        label 'docker-agent'
-    }
-    steps {
-        withSonarQubeEnv('SonarQube') {
-            sh '''
-                sonar-scanner \
-                  -Dsonar.projectKey=knowledge-hub \
-                  -Dsonar.projectName="Knowledge Hub" \
-                  -Dsonar.sources=website
-            '''
+            agent {
+            label 'docker-agent'
+            }
+            steps {
+                script {
+                    def scannerHome = tool 'SonarScanner'
+
+                        withSonarQubeEnv('SonarQube') {
+                        sh """
+                            '${scannerHome}/bin/sonar-scanner' \
+                            -Dsonar.projectKey=knowledge-hub \
+                            -Dsonar.projectName='Knowledge Hub' \
+                            -Dsonar.sources=website
+                            """
+            }
         }
     }
 }
